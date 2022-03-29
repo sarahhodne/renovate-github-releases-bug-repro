@@ -8,6 +8,41 @@ The logs pick up the goreleaser version in the `repro` file, and correctly parse
 
 https://github.com/goreleaser/goreleaser/releases
 
+```
+DEBUG: packageFiles with updates
+{
+  "config": {
+    "regex": [
+      {
+        "packageFile": "repro",
+        "deps": [
+          {
+            "depName": "goreleaser/goreleaser",
+            "currentValue": "v0.167.0",
+            "currentDigest": "9939aabfcf20302a9569a50502f6a7000bbb5a6f5574ddc93111cbd6cc80ec3e",
+            "datasource": "github-releases",
+            "replaceString": "GORELEASER_VERSION=\"v0.167.0\"\nGORELEASER_CHECKSUM=\"9939aabfcf20302a9569a50502f6a7000bbb5a6f5574ddc93111cbd6cc80ec3e\"",
+            "depIndex": 0,
+            "updates": [],
+            "warnings": [],
+            "versioning": "semver",
+            "sourceUrl": "https://github.com/goreleaser/goreleaser",
+            "currentVersion": "v0.167.0",
+            "isSingleVersion": true,
+            "fixedVersion": "v0.167.0"
+          }
+        ],
+        "matchStrings": [
+          "GORELEASER_VERSION=\"(?<currentValue>.*?)\"\\s+GORELEASER_CHECKSUM=\"(?<currentDigest>.*?)\""
+        ],
+        "depNameTemplate": "goreleaser/goreleaser",
+        "datasourceTemplate": "github-releases"
+      }
+    ]
+  }
+}
+```
+
 ## expected behaviour
 
 Renovate opens a PR upgrading goreleaser to the latest version (v1.7.0 at the time of writing).
