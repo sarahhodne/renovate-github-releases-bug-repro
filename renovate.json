@@ -3,7 +3,7 @@
     {
       "fileMatch": ["repro"],
       "matchStrings": [
-        "GORELEASER_VERSION=\"(?<currentValue>.*?)\"\\s+GORELEASER_CHECKSUM=\"(?<currentDigest>.*?)\"",
+        "GORELEASER_VERSION=\"(?<currentValue>.*?)\"\\s+GORELEASER_CHECKSUM=\"(?<currentDigest>.*?)\""
       ],
       "depNameTemplate": "goreleaser/goreleaser",
       "datasourceTemplate": "github-releases"
